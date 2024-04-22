@@ -5,7 +5,7 @@ import Navbar from './components/navbar/Navbar';
 
 function App() {
   return (
-    <div>jai shree ram 
+    <div>
    <Navbar/>
     </div>
   );
