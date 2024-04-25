@@ -1,6 +1,6 @@
 import React from 'react'
 
-const item = (props) => {
+const Item = (props) => {
   return (
     <div className='w-[350px]'>
         <img src={props.image} alt='items'/>
@@ -18,4 +18,4 @@ const item = (props) => {
   )
 }
 
-export default item
+export default Item
