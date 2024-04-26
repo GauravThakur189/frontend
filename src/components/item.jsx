@@ -1,9 +1,10 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Item = (props) => {
   return (
     <div className='w-[350px]'>
-        <img src={props.image} alt='items'/>
+        <Link to={`/product/${props.id}`}><img src={props.image} alt='items'/></Link>
         <p  className='mx-[6px] my-0'>{props.name}</p>
         <div className='flex gap-[20px]'>
             <div className='text-xl
