@@ -1,46 +1,3 @@
-// import React, { useContext } from 'react'
-// import { BrowserRouter,Routes,Route } from 'react-router-dom'
-// import { ShopContext } from '../Context/ShopContext';
-// import dropdown_icon from '../components/assets/dropdown_icon.png'
-// import Item from '../components/Item'
-
-// const ShopCatagory = (props) => {
-//   const {all_product} = useContext(ShopContext);
-//   return (
-//     <div>
-//       <img src={props.banner} alt='catagory banner'/>
-//       <div>
-//         <p>
-//           <span>Showing 1-12</span> out of 36 products
-//         </p>
-//         <div>
-//           sort by <img src={dropdown_icon} alt='dropdown' />
-//         </div>
-//       </div>
-//       <div>
-//         {all_product.map((item,i)=>{
-
-//      if(props.category === item.category){
-
-//       return  <Item
-//               key={i}
-//               id={item.id}
-//               name={item.name}
-//               image={item.image}
-//               new_prices={item.new_price}
-//               old_prices={item.old_price}
-//             />
-//      }
-//      else{
-//       return null;
-//      }
-//         })}
-//       </div>
-//     </div>
-//   )
-// }
-
-// export default ShopCatagory
 
 import React, { useContext } from "react";
 import { ShopContext } from "../Context/ShopContext";
@@ -49,6 +6,7 @@ import Item from "../components/Item";
 
 const ShopCatagory = (props) => {
   const { all_product } = useContext(ShopContext);
+  
   return (
     <div className="container mx-auto">
       <img
@@ -69,6 +27,7 @@ const ShopCatagory = (props) => {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-7 mt-4">
         {all_product.map((item, i) => {
           if (props.category === item.category) {
+            
             return (
               <Item
                 key={i}

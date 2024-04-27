@@ -2,6 +2,7 @@ import React from 'react'
 import new_collections from './assets/new_collections'
 import Item from './Item'
 
+
 const NewCollections = () => {
   return (
     <div className='flex flex-col align-middle gap-3 mb-[100px]'>

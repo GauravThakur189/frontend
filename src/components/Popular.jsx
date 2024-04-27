@@ -2,7 +2,9 @@ import React from "react";
 import Item from "./Item";
 import data_product from "./assets/data";
 
+
 const Popular = () => {
+  console.log("popular" + data_product);
   return (
     <div className='flex flex-col align-middle gap-3 h-[90vh] '>
       <h1 className="text-black text-5xl font-semibold ">POPULAR IN WOMEN</h1>
