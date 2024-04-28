@@ -29,13 +29,15 @@
 
 
 
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import logo from "../assets/logo.png";
 import cart_icon from "../assets/cart_icon.png";
 import { Link } from "react-router-dom";
+import { ShopContext } from "../../Context/ShopContext";
 
 const Navbar = () => {
     const[menu, setMenu] = useState("shop")
+    const { getTotalCartItems} = useContext(ShopContext);
   return (
     <div className="p-8 flex justify-around shadow-sm shadow-black">
       <div>
@@ -54,6 +56,7 @@ const Navbar = () => {
 
       <Link to='/login'> <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Login</button> </Link> 
        <Link to='/cart'> <img src={cart_icon} alt="cart_icon" className="w-8 h-8" /> </Link>
+       <div>{getTotalCartItems()}</div>
       </div>
     </div>
   );

@@ -152,7 +152,7 @@ import { ShopContext } from '../Context/ShopContext';
 import remove_icon from './assets/cart_cross_icon.png';
 
 const CartItems = () => {
-    const { all_product, cartItems, removeFromCart } = useContext(ShopContext);
+    const {getTotalCartAmount, all_product, cartItems, removeFromCart } = useContext(ShopContext);
 
     return (
         <div className="m-10 mx-20">
@@ -197,7 +197,7 @@ const CartItems = () => {
                 <div className="flex justify-between">
                     <div>
                         <p>Subtotals</p>
-                        <p>${0}</p>
+                        <p>${getTotalCartAmount()}</p>
                     </div>
                     <hr className="w-px h-full bg-gray-300 mx-4" />
                     <div>
@@ -208,7 +208,7 @@ const CartItems = () => {
                 <hr className="my-4" />
                 <div className="flex justify-between">
                     <h3>Total</h3>
-                    <h3>${0}</h3>
+                    <h3>${getTotalCartAmount()}</h3>
                 </div>
                 <button className="mt-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 focus:outline-none">PROCEED TO CHECKOUT</button>
             </div>
