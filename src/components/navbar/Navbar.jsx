@@ -53,8 +53,8 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="flex items-center space-x-4">
-
-      <Link to='/login'> <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Login</button> </Link> 
+      {localStorage.getItem('auth-token') ?<button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={()=>{localStorage.removeItem('auth-token'); window.location.replace('/')}}>Logout</button>: <Link to='/login'> <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Login</button> </Link> }
+      
        <Link to='/cart'> <img src={cart_icon} alt="cart_icon" className="w-8 h-8" /> </Link>
        <div>{getTotalCartItems()}</div>
       </div>
